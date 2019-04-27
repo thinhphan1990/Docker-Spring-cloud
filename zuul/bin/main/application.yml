@@ -26,7 +26,7 @@ zuul:
       url: https://google.com
     HELLO-CLIENT:
       path: /service1/**
-      serviceId : HELLO
+      serviceId : service1
     HELLO-CLIENT-1:
       path: /service2/**
-      serviceId: HELLO-CLIENT-1
+      serviceId: service2

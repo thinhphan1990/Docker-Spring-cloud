@@ -10,12 +10,12 @@
 # RUN chmod +x ./gradlew
 
 # RUN gradle build
-### RUN APP ###
+# ### RUN APP ###
 FROM openjdk:8-jre-alpine
 
 WORKDIR /opt/
 
 COPY ./build/libs/app*.jar /opt/app.jar
-EXPOSE 9001
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "/opt/app.jar"]

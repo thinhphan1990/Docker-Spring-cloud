@@ -1,21 +1,21 @@
-FROM gradle:jdk8-alpine as build
+# FROM gradle:jdk8-alpine as build
 
-USER 0
-WORKDIR /app
+# USER 0
+# WORKDIR /app
 
 
-COPY . .
+# COPY . .
 
-RUN chmod +x ./gradlew
+# RUN chmod +x ./gradlew
 
-RUN gradle build
+# RUN gradle build
 
 FROM openjdk:8-jre-alpine
 
 WORKDIR /opt/
 
-COPY --from=build /app/build/libs/eureka-server-0.0.1-SNAPSHOT.jar /opt/eureka-server.jar
+COPY ./build/libs/eureka-server-0.0.1-SNAPSHOT.jar /opt/eureka-server.jar
 
-EXPOSE 8761
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "/opt/eureka-server.jar"]
