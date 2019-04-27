@@ -19,12 +19,12 @@ public class UserResource {
     private UserResponsitory  userResponsitory;
 
 
-    @GetMapping("Jpa/users")
+    @GetMapping("jpa/users")
     public List<User> retrieveAllUsers() {
         return userResponsitory.findAll();
     }
 
-    @GetMapping("Jpa/users/{id}")
+    @GetMapping("jpa/users/{id}")
     public Optional<User> retrieveUser(@PathVariable int id) {
         Optional<User> user = userResponsitory.findById(id);
         if (user==null)throw new UserNotFoundException("id-" + id);
@@ -32,13 +32,13 @@ public class UserResource {
 
     }
 
-    @DeleteMapping("Jpa/users/{id}")
+    @DeleteMapping("jpa/users/{id}")
     public void deleteUser(@PathVariable int id) {
         userResponsitory.deleteById(id);
 
 
     }
-    @PostMapping("Jpa/users")
+    @PostMapping("jpa/users")
     public ResponseEntity<Object> createUser(@RequestBody User user)
     {
         User savedUser = userResponsitory.save(user);

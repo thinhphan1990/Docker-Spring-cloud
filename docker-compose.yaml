@@ -14,6 +14,9 @@ services:
     build:
       context: ./service 1
       dockerfile: Dockerfile
+    ports:
+    - "9001:9001"
+    restart: on-failure
 
   service_2:
     build:
