@@ -24,5 +24,14 @@ http://localhost:8761/ => eureka service
 http://localhost:8080/ => zull
 
 use postman call the api below: 
+------------
+
+call client => AIP zull  => service 1
+
+http://localhost:8080/service1/hello-world
+
+call client => AIP zull  => service 2
+
+http://localhost:8080/service2/hello-world
 
 
