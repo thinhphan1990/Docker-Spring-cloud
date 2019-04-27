@@ -6,8 +6,8 @@
 ![alt text](/IMG/Diagram.png)
 
 
----------
 Run the demo 
+---------
 
 open the terminal and run the statement below:
 
