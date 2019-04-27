@@ -12,12 +12,12 @@ services:
 
   service_1:
     build:
-      context: ./service1
+      context: ./service 1
       dockerfile: Dockerfile
 
   service_2:
     build:
-      context: ./Service2
+      context: ./Service 2
       dockerfile: Dockerfile
 
   zuul:
