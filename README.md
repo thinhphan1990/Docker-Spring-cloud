@@ -3,4 +3,6 @@
 
 
 
-Docker compose up 
+![alt text](/IMG/Diagram.png)
+
+Docker-compose up 
