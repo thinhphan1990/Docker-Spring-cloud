@@ -1,0 +1,28 @@
+version: "3"
+services:
+  
+  eureka-server:
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    
+    ports:
+      - "8761:8761"
+    restart: on-failure
+
+  service_1:
+    build:
+      context: ./gs-actuator-service/complete
+      dockerfile: Dockerfile
+
+  service_2:
+    build:
+      context: ./restfull
+      dockerfile: Dockerfile
+
+  zuul:
+    build:
+      context: ./zuul
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
