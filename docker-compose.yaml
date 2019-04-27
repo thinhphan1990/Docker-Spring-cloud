@@ -12,12 +12,12 @@ services:
 
   service_1:
     build:
-      context: ./gs-actuator-service/complete
+      context: ./service1
       dockerfile: Dockerfile
 
   service_2:
     build:
-      context: ./restfull
+      context: ./Service2
       dockerfile: Dockerfile
 
   zuul:
