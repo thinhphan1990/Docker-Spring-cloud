@@ -14,5 +14,6 @@ cd ./zuul/
 gradle clean build -x test
 cd ..
 
+# cd ./Deploy/Docker-compose
 docker-compose build
 docker-compose up
